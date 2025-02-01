@@ -1,0 +1,271 @@
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Global Styles */
+body {
+  padding-top: 40px; 
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* Form Container */
+.setup-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; 
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background:  #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.fetch-meta-btn {
+  background-color: #4CAF50;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Scraped Pages Table */
+.scraped-pages-container {
+  margin: 30px auto;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scraped-pages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.scraped-pages-table th,
+.scraped-pages-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.scraped-pages-table th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.scraped-pages-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.scraped-pages-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button{
+  width: 100px;
+}
+
+/* Responsive Table */
+/* @media (max-width: 768px) {
+  .scraped-pages-container {
+    padding: 10px;
+  }
+
+  .scraped-pages-table {
+    font-size: 14px;
+  }
+
+  .table-responsive {
+    overflow-x: scroll;
+  }
+} */
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Modal Heading */
+.modal h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.no-data {
+  color: #888;
+  font-style: italic;
+}
+/* Modal List */
+.modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.modal ul li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Close Button */
+.modal button {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+
+.modal button:hover {
+  background: #45a049;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .setup-container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .scraped-pages-table {
+    font-size: 14px;
+  }
+}

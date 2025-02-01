@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .App-header {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

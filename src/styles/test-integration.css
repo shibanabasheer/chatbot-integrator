@@ -1,0 +1,65 @@
+.test-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-box, .failure-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+h2 {
+  color: #28a745;
+}
+
+.failure-box h2 {
+  color: #dc3545;
+}
+
+.btn {
+  display: block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.retry-btn {
+  background-color: #dc3545;
+}
+
+.retry-btn:hover {
+  background-color: #ce2d3d;
+  transform: scale(1.05);
+}
+
+.social-buttons {
+  margin-top: 20px;
+}
+
+.social-btn {
+  background-color: #555;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.social-btn.twitter { background-color: #1da1f2; }
+.social-btn.linkedin { background-color: #0077b5; }
+.social-btn.facebook { background-color: #3b5998; }
